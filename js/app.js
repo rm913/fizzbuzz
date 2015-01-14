@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
-	var num = $('#number').val();
+	
 
 	$('#submit').click(function(){
 
-	
+	var num = $('#number').val();
+
 
 	if (num % 3 == 0) {
 		
@@ -17,7 +18,8 @@ $(document).ready(function(){
 		$('.answer ul').append('<li>'+ "Fizz-Buzz" + '</li>');
 	}
 	else {
-		('.answer ul').append('<li>'+ num + '</li>');
+		$('.answer ul').append('<li>'+ num + '</li>');
+
 	}
 	
 });
