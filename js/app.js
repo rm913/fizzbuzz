@@ -2,10 +2,10 @@ $(document).ready(function(){
 
 	
 
-	$('#submit').click(function(){
+	//$('#submit').click(function(){
 
 	var num = $('#number').val();
-
+	for(i=1;1<=100;1++){
 
 	if (num % 5 == 0 && num % 3 ==0) {
 		
@@ -20,8 +20,8 @@ $(document).ready(function(){
 	else {
 		$('.answer ul').append('<li>'+ num + '</li>');
 
+	//}
 	}
-	
-});
+	});
 
 });
