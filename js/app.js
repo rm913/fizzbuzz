@@ -1,27 +1,26 @@
-$(document).ready(function(){
 
-	
 
-	//$('#submit').click(function(){
+$(document).ready(function(){	
+		//run on document ready (can also run on button click)
+		$('#submit').click(function(){	
+			for (var i = 1; i <= 100; i++ ) {
+				//print the number in the console; press F12 to fire console
+				console.log("Loop number ", i);
+				//alignment: tab size 4
+				 if (i % 5 === 0 && i % 3 === 0) {	// use === for checking type equality
+					$('.answer ul').append('<li>'+ i + ": Fizz-Buzz" + '</li>');
+				}
+				else if (i % 3 === 0) {
+					$('.answer ul').append('<li>'+ i +  ": Fizz" + '</li>');
+				}
+				else if (i % 5 === 0) {			
+					$('.answer ul').append('<li>'+ i +  ": Buzz" + '</li>');
+				}
+				else {
+					$('.answer ul').append('<li>'+ i + " : " + i + '</li>');
+				}
+			}
+		});
 
-	var num = $('#number').val();
-	for(i=1;1<=100;1++){
-
-	if (num % 5 == 0 && num % 3 ==0) {
-		
-		$('.answer ul').append('<li>'+ "Fizz-Buzz" + '</li>');
-	}
-	else if (num % 5 == 0) {
-		$('.answer ul').append('<li>'+ "Buzz" + '</li>');
-	}
-	else if ( num % 3 ==0) {
-		$('.answer ul').append('<li>'+ "Fizz" + '</li>');
-	}
-	else {
-		$('.answer ul').append('<li>'+ num + '</li>');
-
-	//}
-	}
-	});
 
 });
